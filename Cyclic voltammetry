@@ -1,0 +1,28 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+X = pd.read_excel('CVferrocene.xlsx', usecols=['Potential'])
+Y = pd.read_excel('CVferrocene.xlsx', usecols=['CorrienteA'])
+
+
+
+x = np.array(X)
+y = np.array(Y)
+
+plt.plot(x, y)
+#plt.xlabel('Wavelength (cm$^{-1}$)', fontsize=20)
+#plt.ylabel('Intensity (u.a.)', fontsize=25)
+plt.xticks(fontsize=22, color='Black')
+plt.yticks(fontsize=22, color='Black')
+
+plt.title('Cyclic Voltammetry Ferrocenium/Ferrocene - 10 mv/s', fontsize=25)
+#plt.legend(["5 scans", "10 scans", "14 scans","20 scans", "25 scans", "30 scans", "35 scans","40 scans", "45 scans", "50 scans"])
+plt.xlabel('Potential(V)', fontsize=20)
+plt.ylabel('Current(A)', fontsize=25)
+
+
+
+
+plt.show()
+
